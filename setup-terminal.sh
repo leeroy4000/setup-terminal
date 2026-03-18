@@ -22,6 +22,10 @@ fi
 echo "==> Installing Starship..."
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 
+echo "==> Backing up existing config files..."
+[ -f ~/.zshrc ] && cp ~/.zshrc ~/.zshrc.bak.$(date +%Y%m%d%H%M%S) && echo "    ~/.zshrc backed up."
+[ -f ~/.config/starship.toml ] && cp ~/.config/starship.toml ~/.config/starship.toml.bak.$(date +%Y%m%d%H%M%S) && echo "    ~/.config/starship.toml backed up."
+
 echo "==> Writing ~/.zshrc..."
 cat > ~/.zshrc << 'ZSHRC'
 export ZSH="$HOME/.oh-my-zsh"
