@@ -91,5 +91,10 @@ TOML
 echo "==> Setting zsh as default shell..."
 chsh -s "$(which zsh)"
 
+echo "==> Installing setup-terminal.sh to /usr/local/bin..."
+sudo cp "$0" /usr/local/bin/setup-terminal.sh
+sudo chmod +x /usr/local/bin/setup-terminal.sh
+
 echo ""
-echo "Done! Open a new terminal or run: exec zsh"
+echo "Done! You can run this script again any time with: setup-terminal.sh"
+echo "Open a new terminal or run: exec zsh"

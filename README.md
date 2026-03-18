@@ -23,16 +23,18 @@ A bootstrap script that sets up a consistent terminal environment on any Debian-
 
 ### On a new machine
 
+Download, make executable, and run:
+
 ```bash
-curl -fsSL https://raw.githubusercontent.com/leeroy4000/setup-terminal/main/setup-terminal.sh | bash
+curl -fsSL https://raw.githubusercontent.com/leeroy4000/setup-terminal/main/setup-terminal.sh -o setup-terminal.sh
+chmod +x setup-terminal.sh
+bash setup-terminal.sh
 ```
 
-Or clone and run locally:
+The script will install itself to `/usr/local/bin/setup-terminal.sh` automatically. After that you can run it from anywhere with:
 
 ```bash
-git clone https://github.com/leeroy4000/setup-terminal.git
-cd setup-terminal
-bash setup-terminal.sh
+setup-terminal.sh
 ```
 
 ### After running
